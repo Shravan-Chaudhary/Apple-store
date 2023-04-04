@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import Link from 'next/link'
 import Button from './Button'
 
@@ -25,7 +25,12 @@ function Hero() {
 
       {/* Image Container */}
       <div className='relative hidden h-[450px] w-[450px] transition-all duration-500 md:inline lg:h-[650px] lg:w-[650px]'>
-        <Image src='/iphone.png' alt='iphone' fill objectFit='contain' />
+        <Image
+          src='/iphone.png'
+          alt='iphone'
+          layout='fill'
+          objectFit='contain'
+        />
       </div>
     </section>
   )

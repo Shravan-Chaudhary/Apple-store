@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import Link from 'next/link'
 import { BsSearch } from 'react-icons/bs'
 import { HiOutlineShoppingBag } from 'react-icons/hi'
@@ -11,7 +11,12 @@ function Header() {
       <div className='flex items-center justify-center md:w-1/5'>
         <Link href='/'>
           <div className='relative  h-10 w-5 cursor-pointer opacity-75 transition hover:opacity-100'>
-            <Image src='/apple-logo.png' alt='logo' fill objectFit='contain' />
+            <Image
+              src='/apple-logo.png'
+              alt='logo'
+              layout='fill'
+              objectFit='contain'
+            />
           </div>
         </Link>
       </div>
